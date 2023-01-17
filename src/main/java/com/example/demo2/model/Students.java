@@ -1,16 +1,17 @@
 package com.example.demo2.model;
-
 import javax.persistence.*;
 @Entity
 @Table(name = "student_list")
 public class Students {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String firstName;
-    private String lastName;
-    private String groupp;
-    private boolean payment;
+    Long id;
+    String firstName;
+    String lastName;
+    String groupp;
+    boolean payment;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public Students(Long id, String firstName, String lastName, String groupp, boolean payment) {
         this.id = id;
@@ -43,7 +44,7 @@ public class Students {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastname(String lastName) {
         this.lastName = lastName;
     }
 

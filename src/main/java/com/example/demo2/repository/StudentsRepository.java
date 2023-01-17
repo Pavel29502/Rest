@@ -9,12 +9,14 @@ public interface StudentsRepository extends JpaRepository<Students, Long> {
     //List<MyStudents> findByLastName(String lastName)
 
     //List<MyStudents> findAllBy
+    List<Students> findAll();
     List<Students> findAllByPaymentFalse();
     //List<Students> findAllByPayment(boolean payment);
 
     List<Students> findAllByGroupp(String groupp);
     List<Students> findByFirstName(String firstName);
     void deleteById(Long id);
+    List<Students> findByLastName(String lastName);
 
 
 }
